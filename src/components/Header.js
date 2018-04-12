@@ -1,17 +1,31 @@
 import React from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "../css/Header.css";
 
 class Header extends React.Component {
+	HeaderContent = <h1>Content</h1>;
+	FullContent = "";
+
+	componentDidMount() {
+		this.HeaderContent = <h1>Hi</h1>;
+		this.render();
+	}
+
 	render() {
+		const transitionOptions = {
+			classNames: "content",
+			timeout: { enter: 5000 }
+		};
+
 		return (
 			<div className="header">
-				<h1>H1 The spectacle before us was indeed sublime.</h1>
-				<h2>H2 The spectacle before us was indeed sublime.</h2>
-				<h3>H3 The spectacle before us was indeed sublime.</h3>
-				<h4>H4 The spectacle before us was indeed sublime.</h4>
-				<h5>H5 The spectacle before us was indeed sublime.</h5>
-				<h6>H6 The spectacle before us was indeed sublime.</h6>
-				<p>Paragraph The spectacle before us was indeed sublime.</p>
-				<a href="google.com">Link</a>
+				<div className="align-center">
+					<div>
+						<h1>Marla Foreman</h1>
+						<h3>JavaScript Software Engineer from Omaha, NE</h3>
+						<h3>Making cool websites with Angular and React</h3>
+					</div>
+				</div>
 			</div>
 		);
 	}
