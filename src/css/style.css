@@ -29,8 +29,45 @@ a:hover {
 	align-items: center;
 }
 
+.project {
+	border: 1px solid white;
+}
+
+/* Setting up box model myself :) */
+
+.row, .column {
+	box-sizing: border-box;
+}
+
+.column {
+	margin-bottom: 1.6%;
+	position: relative;
+	float: left;
+}
+
+.column + .column {
+	margin-left: 1.6%;
+}
+
+.column-4 {
+	width: 32.2666666667%;
+}
+
 @media only screen and (max-width: 576px) {
 	body {
 		margin: 0 10px;
+	}
+
+	.column {
+		margin-bottom: 0;
+	}
+
+	.column-4 {
+		width: auto;
+		float: none;
+	}
+
+	.column + .column {
+		margin-left: 0;
 	}
 }
