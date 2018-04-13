@@ -2,6 +2,10 @@ import React from "react";
 import Project from "./Project";
 
 class Projects extends React.Component {
+	componentDidMount() {
+		this.props.loadProjects;
+	}
+
 	render() {
 		return (
 			<div>

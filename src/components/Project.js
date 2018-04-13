@@ -7,8 +7,9 @@ class Project extends React.Component {
 			<div className="project column column-4">
 				<p>Image</p>
 				<p>Title</p>
-				<p>Description</p>
-				<p>Tools, Language</p>
+				<p>URL</p>
+				<p>Start Date</p>
+				<p>Uses</p>
 			</div>
 		);
 	}
