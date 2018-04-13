@@ -31,6 +31,7 @@ a:hover {
 
 .project {
 	border: 1px solid white;
+	padding: 10px;
 }
 
 /* Setting up box model myself :) */
