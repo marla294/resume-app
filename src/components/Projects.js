@@ -7,7 +7,13 @@ class Projects extends React.Component {
 			<div>
 				<h1>Current Projects (2017-2018)</h1>
 				<div className="row">
-					<Project />
+					{Object.keys(this.props.projects).map(key => (
+						<Project
+							key={key}
+							project={this.props.projects[key]}
+							className="column column-4"
+						/>
+					))}
 				</div>
 			</div>
 		);
