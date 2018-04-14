@@ -8,11 +8,7 @@ class Projects extends React.Component {
 				<h1>Current Projects (2017-2018)</h1>
 				<div className="row">
 					{Object.keys(this.props.projects).map(key => (
-						<Project
-							key={key}
-							project={this.props.projects[key]}
-							className="column column-4"
-						/>
+						<Project key={key} project={this.props.projects[key]} />
 					))}
 				</div>
 			</div>
