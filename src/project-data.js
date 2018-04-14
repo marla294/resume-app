@@ -2,7 +2,7 @@ const data = {
 	blog: {
 		image: "/images/blog.jpg",
 		name: "Personal Blog",
-		url: "marlaforeman.com",
+		url: "http://www.marlaforeman.com",
 		start: "Dec 2017",
 		uses: "Angular, Bootstrap, Typescript"
 	},
@@ -15,7 +15,7 @@ const data = {
 	},
 	portfolio: {
 		image: "/images/portfolio.jpg",
-		name: "Portfolio Website (this website)",
+		name: "Portfolio Website",
 		url: "some url",
 		start: "Apr 2018",
 		uses: "React, Javascript"

@@ -23,7 +23,6 @@ class Header extends React.Component {
 					<div>
 						<h1>Marla Foreman</h1>
 						<h3>JavaScript Software Engineer from Omaha, NE</h3>
-						<h3>Making cool websites with Angular and React</h3>
 					</div>
 				</div>
 			</div>

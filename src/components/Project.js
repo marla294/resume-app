@@ -3,13 +3,13 @@ import "../css/Project.css";
 
 class Project extends React.Component {
 	render() {
+		const { image, name, url, start, uses } = this.props.project;
 		return (
 			<div className="project column column-4">
-				<p>{this.props.project.image}</p>
-				<p>{this.props.project.name}</p>
-				<p>{this.props.project.url}</p>
-				<p>{this.props.project.start}</p>
-				<p>{this.props.project.uses}</p>
+				<img src={image} alt={name} className="screenshot" />
+				<h3>{name}</h3>
+				<a href={url}>{url}</a>
+				<p>{uses}</p>
 			</div>
 		);
 	}
