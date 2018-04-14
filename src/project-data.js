@@ -1,4 +1,4 @@
-const projectdata = {
+const data = {
 	blog: {
 		image: "/images/blog.jpg",
 		name: "Personal Blog",
@@ -21,3 +21,5 @@ const projectdata = {
 		uses: "React, Javascript"
 	}
 };
+
+export default data;

@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./Header";
 import Projects from "./Projects";
-import projectdata from "../ProjectData";
+import data from "../project-data";
 
 class App extends React.Component {
 	state = {
 		projects: {}
 	};
 
+	componentDidMount() {
+		this.loadProjects();
+	}
+
 	loadProjects = () => {
-		console.log("loadProjects");
-		this.setState({ projects: projectdata });
+		this.setState({ projects: data });
 	};
 
 	render() {
 		return (
 			<div>
 				{/*<Header />*/}
-				<Projects
-					projects={this.state.projects}
-					loadProjects={this.loadProjects}
-				/>
+				<Projects projects={this.state.projects} />
 			</div>
 		);
 	}
