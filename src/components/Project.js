@@ -2,6 +2,25 @@ import React from "react";
 import "../css/Project.css";
 
 class Project extends React.Component {
+	getTechImage(tech) {
+		switch (tech) {
+			case "Angular":
+				return "/images/tech/angular-favicon.jpg";
+				break;
+			case "Bootstrap":
+				return "/images/tech/bootstrap-favicon.jpg";
+				break;
+			case "JavaScript":
+				return "/images/tech/javascript-favicon.jpg";
+				break;
+			case "TypeScript":
+				return "/images/tech/typescript-favicon.jpg";
+				break;
+			default:
+				return "/images/tech/angular-favicon.jpg";
+		}
+	}
+
 	render() {
 		const { image, name, desc, url, start, uses } = this.props.project;
 		return (
@@ -16,8 +35,17 @@ class Project extends React.Component {
 							/>
 						</div>
 						<h3>{name}</h3>
-						<p>{desc}</p>
-						<p>{uses}</p>
+						<p className="desc">{desc}</p>
+						{uses.map(tech => {
+							/*console.log(this.getTechImage(tech));*/
+							return (
+								<img
+									className="favicon"
+									src={this.getTechImage(tech)}
+									alt={tech}
+								/>
+							);
+						})}
 					</div>
 				</a>
 			</div>
