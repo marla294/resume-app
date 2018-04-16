@@ -3,18 +3,25 @@ import Header from "./Header";
 import Projects from "./Projects";
 import PastWork from "./PastWork";
 import data from "../project-data";
+import positions from "../positions";
 
 class App extends React.Component {
 	state = {
-		projects: {}
+		projects: {},
+		positions: {}
 	};
 
 	componentDidMount() {
 		this.loadProjects();
+		this.loadPositions();
 	}
 
 	loadProjects = () => {
 		this.setState({ projects: data });
+	};
+
+	loadPositions = () => {
+		this.setState({ positions: positions });
 	};
 
 	render() {
@@ -22,7 +29,7 @@ class App extends React.Component {
 			<div>
 				{/*<Header />*/}
 				{/*<Projects projects={this.state.projects} />*/}
-				<PastWork />
+				<PastWork positions={this.state.positions} />
 			</div>
 		);
 	}

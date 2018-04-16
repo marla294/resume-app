@@ -6,6 +6,14 @@ class PastWork extends React.Component {
 		return (
 			<div>
 				<h1>Work Experience (2005-2017)</h1>
+				<div className="flex-container">
+					{Object.keys(this.props.positions).map(key => (
+						<Position
+							key={key}
+							position={this.props.positions[key]}
+						/>
+					))}
+				</div>
 			</div>
 		);
 	}
