@@ -15,10 +15,6 @@ a {
 	color: #eee;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 .header {
 	height: 100vh;
 }
@@ -29,57 +25,23 @@ a:hover {
 	align-items: center;
 }
 
-.project {
-	border: 1px solid white;
-	padding: 10px;
+/* Flex container */
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-/* Setting up box model myself :) */
-
-.row, .column {
-	box-sizing: border-box;
-}
-
-.column {
-	margin-bottom: 1.6%;
-	position: relative;
-	float: left;
-}
-
-.column + .column {
-	margin-left: 1.6%;
-}
-
-.column-4 {
-	width: 32.2666666667%;
-}
-
-/* project images */
-
-.screenshot {
-	max-width: 200px;
-	border: 1px solid white;
-}
-
-.row div:hover {
+.boxshadow-container div:hover {
 	box-shadow: 5px 10px 18px black;
 }
+
+.boxshadow-container + .boxshadow-container {
+	margin-left: 2%;
+}
+
 
 @media only screen and (max-width: 576px) {
 	body {
 		margin: 0 10px;
-	}
-
-	.column {
-		margin-bottom: 0;
-	}
-
-	.column-4 {
-		width: auto;
-		float: none;
-	}
-
-	.column + .column {
-		margin-left: 0;
 	}
 }

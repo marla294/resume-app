@@ -6,7 +6,7 @@ class Projects extends React.Component {
 		return (
 			<div>
 				<h1>Current Projects (2017-2018)</h1>
-				<div className="row">
+				<div className="flex-container">
 					{Object.keys(this.props.projects).map(key => (
 						<Project key={key} project={this.props.projects[key]} />
 					))}
