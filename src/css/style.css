@@ -21,9 +21,11 @@ a {
 }
 
 .align-center {
-	height: inherit;
-	display: flex;
 	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
 }
 
 /* Flex container */
@@ -33,7 +35,7 @@ a {
 }
 
 /* Box Shadow Container */
-.boxshadow-container div:hover {
+.boxshadow-container > div:hover {
 	box-shadow: 5px 10px 18px black;
 }
 

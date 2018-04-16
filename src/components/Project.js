@@ -8,7 +8,13 @@ class Project extends React.Component {
 			<div className="boxshadow-container">
 				<a href={url} target="_blank">
 					<div className="project">
-						<img src={image} alt={name} className="screenshot" />
+						<div className="flex-container justify-center">
+							<img
+								src={image}
+								alt={name}
+								className="screenshot"
+							/>
+						</div>
 						<h3>{name}</h3>
 						<p>{desc}</p>
 						<p>{uses}</p>
