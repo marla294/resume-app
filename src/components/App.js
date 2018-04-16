@@ -3,7 +3,7 @@ import Header from "./Header";
 import Projects from "./Projects";
 import PastWork from "./PastWork";
 import data from "../project-data";
-import positions from "../positions";
+import positions from "../positions-data";
 
 class App extends React.Component {
 	state = {

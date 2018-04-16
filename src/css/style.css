@@ -39,6 +39,10 @@ a {
 	box-shadow: 5px 10px 18px black;
 }
 
+.boxshadow-container div.position:hover {
+	box-shadow: 5px 10px 18px black;
+}
+
 .boxshadow-container {
 	margin-left: 2%;
 }
