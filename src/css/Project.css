@@ -1,10 +1,12 @@
 .project {
-	border: 1px solid black;
+	background-color: #041f23;
 	padding: 10px;
+	width: 300px;
 }
 
 .screenshot {
-	max-width: 200px;
+	max-width: 250px;
+	height: 210px;
 	border: 1px solid black;
 }
 
