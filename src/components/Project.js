@@ -37,7 +37,6 @@ class Project extends React.Component {
 						<h3>{name}</h3>
 						<p className="desc">{desc}</p>
 						{uses.map(tech => {
-							/*console.log(this.getTechImage(tech));*/
 							return (
 								<img
 									className="favicon"

@@ -1,9 +1,13 @@
 import React from "react";
-import Job from "Job";
+import Position from "./Position";
 
 class PastWork extends React.Component {
 	render() {
-		return;
+		return (
+			<div>
+				<h1>Work Experience (2005-2017)</h1>
+			</div>
+		);
 	}
 }
 

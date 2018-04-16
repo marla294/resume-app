@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Projects from "./Projects";
+import PastWork from "./PastWork";
 import data from "../project-data";
 
 class App extends React.Component {
@@ -20,7 +21,8 @@ class App extends React.Component {
 		return (
 			<div>
 				{/*<Header />*/}
-				<Projects projects={this.state.projects} />
+				{/*<Projects projects={this.state.projects} />*/}
+				<PastWork />
 			</div>
 		);
 	}
