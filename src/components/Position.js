@@ -11,22 +11,31 @@ class Position extends React.Component {
 			title,
 			start,
 			end,
-			url
+			url,
+			jobdesc
 		} = this.props.position;
 		return (
 			<a href={url} target="_blank">
 				<div className="position">
-					<img src={image} alt={name} className="company" />
+					<div className="image flex-container justify-center">
+						<img src={image} alt={name} />
+					</div>
 					<div className="flex-container align-center">
 						<div className="info">
-							<h3>
-								{name} * {loc}
-							</h3>
-							<p>{desc}</p>
-							<p>{title}</p>
-							<p>
-								{start} - {end}
-							</p>
+							<div className="company">
+								<h2>{name}</h2>
+								<h3>{loc}</h3>
+								<p>
+									<i>{desc}</i>
+								</p>
+							</div>
+							<div className="my-title">
+								<h2>{title}</h2>
+								<h3>
+									{start} - {end}
+								</h3>
+								<p>{jobdesc}</p>
+							</div>
 						</div>
 					</div>
 				</div>
