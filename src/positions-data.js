@@ -2,7 +2,7 @@ const positions = {
 	D3: {
 		image: "/images/companies/D3.jpg",
 		name: "D3 Banking Technology",
-		desc: "API-driven digital banking platform",
+		desc: "API-driven digital banking",
 		loc: "Omaha, NE",
 		title: "Senior Quality Assurance Engineer",
 		start: "June 2016",
@@ -11,9 +11,8 @@ const positions = {
 	},
 	WEX: {
 		image: "/images/companies/WEX.jpg",
-		name: "Wolverine Execution Services (wex)",
-		desc:
-			"Enabling clients to trade equities, options and futures through proprietary trading platform WTP",
+		name: "Wolverine Execution Services",
+		desc: "Option and equity digital trading",
 		loc: "Chicago, IL",
 		title: "Quality Assurance Software Engineer",
 		start: "Jul 2014",
@@ -23,8 +22,7 @@ const positions = {
 	Strata: {
 		image: "/images/companies/Strata.jpg",
 		name: "Strata Decision Technology",
-		desc:
-			"Cloud-based SaaS financial analytics and performance platform in healthcare",
+		desc: "Healthcare financial analytics",
 		loc: "Chicago, IL",
 		title: "Software Quality Assurance Lead",
 		start: "Jul 2008",
@@ -34,7 +32,7 @@ const positions = {
 	NGC: {
 		image: "/images/companies/NGC.jpg",
 		name: "Northrop Grumman Corporation",
-		desc: "Defense Contractor (aka, Stark Industries)",
+		desc: "Defense Contractor",
 		loc: "Rolling Meadows, IL",
 		title: "RF Engineer",
 		start: "June 2005",

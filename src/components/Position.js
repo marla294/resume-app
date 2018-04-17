@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Position.css";
 
 class Position extends React.Component {
 	render() {
@@ -13,20 +14,23 @@ class Position extends React.Component {
 			url
 		} = this.props.position;
 		return (
-			<div className="boxshadow-container">
-				<a href={url} target="_blank">
-					<div className="position">
-						<img src={image} alt={name} className="company" />
-						<h3>{name}</h3>
-						<p>{loc}</p>
-						<p>{desc}</p>
-						<p>{title}</p>
-						<p>
-							{start} - {end}
-						</p>
+			<a href={url} target="_blank">
+				<div className="position">
+					<img src={image} alt={name} className="company" />
+					<div className="flex-container align-center">
+						<div className="info">
+							<h3>
+								{name} * {loc}
+							</h3>
+							<p>{desc}</p>
+							<p>{title}</p>
+							<p>
+								{start} - {end}
+							</p>
+						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
 		);
 	}
 }
