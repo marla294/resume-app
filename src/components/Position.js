@@ -18,10 +18,10 @@ class Position extends React.Component {
 			<a href={url} target="_blank">
 				<div className="boxshadow-container">
 					<div className="position">
-						<div className="image flex-container justify-center">
+						<div className="image flex-container align-center">
 							<img src={image} alt={name} />
 						</div>
-						<div className="flex-container align-center">
+						<div className="flex-container align-center justify-center">
 							<div className="info">
 								<div className="company">
 									<h2>{name}</h2>
