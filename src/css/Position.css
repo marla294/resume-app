@@ -47,6 +47,8 @@ h2, h3, p {
 
 	.position .image {
 		float: none;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 
 	.info {
@@ -55,5 +57,9 @@ h2, h3, p {
 
 	.flex-container {
 		height: auto;
+	}
+
+	.boxshadow-container {
+		width: 360px;
 	}
 }

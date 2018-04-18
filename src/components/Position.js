@@ -15,10 +15,10 @@ class Position extends React.Component {
 			jobdesc
 		} = this.props.position;
 		return (
-			<a href={url} target="_blank">
-				<div className="boxshadow-container">
+			<div className="boxshadow-container">
+				<a href={url} target="_blank">
 					<div className="position">
-						<div className="image flex-container align-center">
+						<div className="image flex-container justify-center">
 							<img src={image} alt={name} />
 						</div>
 						<div className="flex-container align-center justify-center">
@@ -40,8 +40,8 @@ class Position extends React.Component {
 							</div>
 						</div>
 					</div>
-				</div>
-			</a>
+				</a>
+			</div>
 		);
 	}
 }
