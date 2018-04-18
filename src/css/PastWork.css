@@ -5,3 +5,7 @@
 .head h2 {
 	margin-bottom: 20px;
 }
+
+.flex-container {
+	height: auto;
+}

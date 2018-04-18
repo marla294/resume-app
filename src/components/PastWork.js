@@ -10,9 +10,14 @@ class PastWork extends React.Component {
 					<h1>Work Experience</h1>
 					<h2>2005-2017</h2>
 				</div>
-				{Object.keys(this.props.positions).map(key => (
-					<Position key={key} position={this.props.positions[key]} />
-				))}
+				<div className="flex-container justify-center">
+					{Object.keys(this.props.positions).map(key => (
+						<Position
+							key={key}
+							position={this.props.positions[key]}
+						/>
+					))}
+				</div>
 			</div>
 		);
 	}
