@@ -34,6 +34,15 @@ h2, h3, p {
 	height: 260px;
 }
 
+.position .favicon {
+	width: 25px;
+	height: 25px;
+}
+
+.favicon + .favicon {
+	margin-left: 10px;
+}
+
 @media only screen and (max-width: 768px) {
 	.position {
 		height: 650px;

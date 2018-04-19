@@ -1,5 +1,6 @@
 import React from "react";
-import "../css/Project.css";
+//import "../css/Project.css";
+import "../css/Position.css";
 
 class Project extends React.Component {
 	getTechImage(tech) {
@@ -26,6 +27,42 @@ class Project extends React.Component {
 		return (
 			<div className="boxshadow-container">
 				<a href={url} target="_blank">
+					<div className="position">
+						<div className="image flex-container justify-center">
+							<img src={image} alt={name} />
+						</div>
+						<div className="flex-container align-center justify-center">
+							<div className="info">
+								<div className="company">
+									<h2>{name}</h2>
+									<p>{desc}</p>
+								</div>
+								<div className="my-title">
+									<h3>{start}</h3>
+									{uses.map(tech => {
+										return (
+											<img
+												className="favicon"
+												src={this.getTechImage(tech)}
+												alt={tech}
+											/>
+										);
+									})}
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		);
+	}
+}
+
+export default Project;
+
+/*
+			<div className="boxshadow-container">
+				<a href={url} target="_blank">
 					<div className="project">
 						<div className="flex-container justify-center">
 							<img
@@ -48,8 +85,4 @@ class Project extends React.Component {
 					</div>
 				</a>
 			</div>
-		);
-	}
-}
-
-export default Project;
+*/

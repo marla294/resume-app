@@ -26,9 +26,7 @@ class Position extends React.Component {
 								<div className="company">
 									<h2>{name}</h2>
 									<h3>{loc}</h3>
-									<p>
-										<i>{desc}</i>
-									</p>
+									<p>{desc}</p>
 								</div>
 								<div className="my-title">
 									<h2>{title}</h2>

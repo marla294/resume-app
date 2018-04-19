@@ -27,9 +27,9 @@ class School extends React.Component {
 									<h3>{loc}</h3>
 								</div>
 								<div className="my-title">
-									<h2>{major}</h2>
-									<h2>{minor}</h2>
-									<h3>{grad}</h3>
+									<h2>BS {major}</h2>
+									<h3>Minor in {minor}</h3>
+									<p>Graduated {grad}</p>
 								</div>
 							</div>
 						</div>
