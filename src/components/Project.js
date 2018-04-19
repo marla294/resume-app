@@ -11,6 +11,9 @@ class Project extends React.Component {
 			case "Bootstrap":
 				return "/images/tech/bootstrap-favicon.jpg";
 				break;
+			case "React":
+				return "/images/tech/react-favicon.jpg";
+				break;
 			case "JavaScript":
 				return "/images/tech/javascript-favicon.jpg";
 				break;
@@ -35,10 +38,10 @@ class Project extends React.Component {
 							<div className="info">
 								<div className="company">
 									<h2>{name}</h2>
+									<h3>{start}</h3>
 									<p>{desc}</p>
 								</div>
 								<div className="my-title">
-									<h3>{start}</h3>
 									{uses.map(tech => {
 										return (
 											<img
@@ -59,30 +62,3 @@ class Project extends React.Component {
 }
 
 export default Project;
-
-/*
-			<div className="boxshadow-container">
-				<a href={url} target="_blank">
-					<div className="project">
-						<div className="flex-container justify-center">
-							<img
-								src={image}
-								alt={name}
-								className="screenshot"
-							/>
-						</div>
-						<h3>{name}</h3>
-						<p className="desc">{desc}</p>
-						{uses.map(tech => {
-							return (
-								<img
-									className="favicon"
-									src={this.getTechImage(tech)}
-									alt={tech}
-								/>
-							);
-						})}
-					</div>
-				</a>
-			</div>
-*/

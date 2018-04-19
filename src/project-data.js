@@ -1,10 +1,18 @@
 const data = {
-	blog: {
-		image: "/images/blog.jpg",
-		name: "Personal Blog",
-		desc: "My personal blog of (mostly) software development content",
-		url: "http://www.marlaforeman.com",
-		start: "Dec 2017",
+	portfolio: {
+		image: "/images/portfolio.jpg",
+		name: "Portfolio Website",
+		desc: "This website, displaying my resume in an interactive format",
+		url: "some url",
+		start: "Apr 2018",
+		uses: ["React", "JavaScript"]
+	},
+	axequest: {
+		image: "/images/axequest.jpg",
+		name: "Axe Quest",
+		desc: "Search for premium guitars using this search service",
+		url: "https://www.axequest.com",
+		start: "Mar 2018",
 		uses: ["Angular", "Bootstrap", "TypeScript"]
 	},
 	chesskers: {
@@ -15,21 +23,13 @@ const data = {
 		start: "Feb 2018",
 		uses: ["Angular", "TypeScript"]
 	},
-	axequest: {
-		image: "/images/axequest.jpg",
-		name: "Axe Quest",
-		desc: "Search for premium guitars using this search service",
-		url: "https://www.axequest.com",
-		start: "Mar 2018",
+	blog: {
+		image: "/images/blog.jpg",
+		name: "Personal Blog",
+		desc: "My personal blog of (mostly) software development content",
+		url: "http://www.marlaforeman.com",
+		start: "Dec 2017",
 		uses: ["Angular", "Bootstrap", "TypeScript"]
-	},
-	portfolio: {
-		image: "/images/portfolio.jpg",
-		name: "Portfolio Website",
-		desc: "This website",
-		url: "some url",
-		start: "Apr 2018",
-		uses: ["React", "JavaScript"]
 	}
 };
 
