@@ -12,6 +12,7 @@
 
 .info {
 	margin-left: 20px;
+	margin-right: 20px;
 	width: 407px;
 }
 
@@ -27,7 +28,7 @@ h2, h3, p {
 .boxshadow-container {
 	margin-left: 0 !important;
 	margin-bottom: 20px !important;
-	width: 689px;
+	width: 720px;
 }
 
 .flex-container {
@@ -45,7 +46,7 @@ h2, h3, p {
 
 @media only screen and (max-width: 768px) {
 	.position {
-		height: 650px;
+		height: auto;
 		width: 370px;
 		overflow: hidden;
 	}
@@ -61,7 +62,7 @@ h2, h3, p {
 	}
 
 	.info {
-		margin-left: 0px;
+		/*margin-left: 0px;*/
 	}
 
 	.flex-container {

@@ -39,12 +39,12 @@ class Project extends React.Component {
 								<div className="company">
 									<h2>{name}</h2>
 									<h3>{start}</h3>
-									<p>{desc}</p>
 								</div>
 								<div className="my-title">
 									{uses.map(tech => {
 										return (
 											<img
+												key={tech}
 												className="favicon"
 												src={this.getTechImage(tech)}
 												alt={tech}

@@ -1,6 +1,6 @@
 const data = {
 	portfolio: {
-		image: "/images/portfolio.jpg",
+		image: "/images/projects/portfolio.jpg",
 		name: "Portfolio Website",
 		desc: "This website, displaying my resume in an interactive format",
 		url: "some url",
@@ -8,7 +8,7 @@ const data = {
 		uses: ["React", "JavaScript"]
 	},
 	axequest: {
-		image: "/images/axequest.jpg",
+		image: "/images/projects/axequest.jpg",
 		name: "Axe Quest",
 		desc: "Search for premium guitars using this search service",
 		url: "https://www.axequest.com",
@@ -16,7 +16,7 @@ const data = {
 		uses: ["Angular", "Bootstrap", "TypeScript"]
 	},
 	chesskers: {
-		image: "/images/chesskers.jpg",
+		image: "/images/projects/chesskers.jpg",
 		name: "Chesskers Game",
 		desc: "Play chess or checkers online",
 		url: "https://marla294.github.io/chess/",
@@ -24,9 +24,9 @@ const data = {
 		uses: ["Angular", "TypeScript"]
 	},
 	blog: {
-		image: "/images/blog.jpg",
+		image: "/images/projects/blog.jpg",
 		name: "Personal Blog",
-		desc: "My personal blog of (mostly) software development content",
+		desc: "Blog containing mostly software development content",
 		url: "http://www.marlaforeman.com",
 		start: "Dec 2017",
 		uses: ["Angular", "Bootstrap", "TypeScript"]
