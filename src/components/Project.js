@@ -1,6 +1,5 @@
 import React from "react";
-//import "../css/Project.css";
-import "../css/Position.css";
+import "../css/Component.css";
 
 class Project extends React.Component {
 	getTechImage(tech) {

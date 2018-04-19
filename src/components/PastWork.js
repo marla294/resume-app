@@ -1,6 +1,6 @@
 import React from "react";
 import Position from "./Position";
-import "../css/PastWork.css";
+import "../css/ParentComponent.css";
 
 class PastWork extends React.Component {
 	render() {

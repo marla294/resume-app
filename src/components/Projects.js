@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import "../css/PastWork.css";
+import "../css/ParentComponent.css";
 
 class Projects extends React.Component {
 	render() {
