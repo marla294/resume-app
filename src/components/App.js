@@ -33,14 +33,25 @@ class App extends React.Component {
 		this.setState({ schools: schools });
 	};
 
+	componentId = "Header";
+
 	render() {
 		return (
 			<div>
-				<Header show={true} />
-				<Projects projects={this.state.projects} show={true} />
-				<PastWork positions={this.state.positions} show={true} />
-				<Education schools={this.state.schools} show={true} />
-				<Contact show={true} />
+				<Header show={this.componentId === "Header"} />
+				<Projects
+					projects={this.state.projects}
+					show={this.componentId === "Projects"}
+				/>
+				<PastWork
+					positions={this.state.positions}
+					show={this.componentId === "PastWork"}
+				/>
+				<Education
+					schools={this.state.schools}
+					show={this.componentId === "Education"}
+				/>
+				<Contact show={this.componentId === "Contact"} />
 			</div>
 		);
 	}
