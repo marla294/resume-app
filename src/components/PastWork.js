@@ -4,6 +4,9 @@ import "../css/ParentComponent.css";
 
 class PastWork extends React.Component {
 	render() {
+		if (!this.props.show) {
+			return null;
+		}
 		return (
 			<div>
 				<div className="head">

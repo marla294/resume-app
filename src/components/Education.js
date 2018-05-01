@@ -3,6 +3,9 @@ import School from "./School";
 
 class Education extends React.Component {
 	render() {
+		if (!this.props.show) {
+			return null;
+		}
 		return (
 			<div>
 				<div className="head">

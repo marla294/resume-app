@@ -36,11 +36,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
-				<Projects projects={this.state.projects} />
-				<PastWork positions={this.state.positions} />
-				<Education schools={this.state.schools} />
-				<Contact />
+				<Header show={true} />
+				<Projects projects={this.state.projects} show={true} />
+				<PastWork positions={this.state.positions} show={true} />
+				<Education schools={this.state.schools} show={true} />
+				<Contact show={true} />
 			</div>
 		);
 	}
