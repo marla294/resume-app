@@ -12,7 +12,8 @@ class App extends React.Component {
 	state = {
 		projects: {},
 		positions: {},
-		schools: {}
+		schools: {},
+		componentId: "Header"
 	};
 
 	componentDidMount() {
@@ -36,34 +37,32 @@ class App extends React.Component {
 
 	components = ["Header", "Projects", "PastWork", "Education", "Contact"];
 
-	componentId = "Header";
-
 	handleScroll = event => {
 		let id;
 		if (window.scrollY !== 0) {
-			id = this.components.findIndex(() => this.componentId);
+			id = this.components.findIndex(() => this.state.componentId);
 			id = (id + 1) % 5;
-			this.componentId = this.components[id];
+			this.setState({ componentId: this.components[id] });
 		}
 	};
 
 	render() {
 		return (
 			<div>
-				<Header show={this.componentId === "Header"} />
+				<Header show={this.state.componentId === "Header"} />
 				<Projects
 					projects={this.state.projects}
-					show={this.componentId === "Projects"}
+					show={this.state.componentId === "Projects"}
 				/>
 				<PastWork
 					positions={this.state.positions}
-					show={this.componentId === "PastWork"}
+					show={this.state.componentId === "PastWork"}
 				/>
 				<Education
 					schools={this.state.schools}
-					show={this.componentId === "Education"}
+					show={this.state.componentId === "Education"}
 				/>
-				<Contact show={this.componentId === "Contact"} />
+				<Contact show={this.state.componentId === "Contact"} />
 			</div>
 		);
 	}
