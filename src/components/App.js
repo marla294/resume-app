@@ -40,7 +40,11 @@ class App extends React.Component {
 	handleScroll = event => {
 		let id;
 		if (window.scrollY !== 0) {
-			id = this.components.findIndex(() => this.state.componentId);
+			this.components.forEach((component, index) => {
+				if (component === this.state.componentId) {
+					id = index;
+				}
+			});
 			id = (id + 1) % 5;
 			this.setState({ componentId: this.components[id] });
 		}
