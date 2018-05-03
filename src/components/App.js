@@ -35,19 +35,27 @@ class App extends React.Component {
 		this.setState({ schools: schools });
 	};
 
+	position = 0;
+
 	components = ["Header", "Projects", "PastWork", "Education", "Contact"];
 
 	handleScroll = event => {
 		let id;
-		if (window.scrollY !== 0) {
-			this.components.forEach((component, index) => {
-				if (component === this.state.componentId) {
-					id = index;
-				}
-			});
+		this.components.forEach((component, index) => {
+			if (component === this.state.componentId) {
+				id = index;
+			}
+		});
+
+		if (window.scrollY > this.position) {
 			id = (id + 1) % 5;
-			this.setState({ componentId: this.components[id] });
+		} else if (window.scrollY < this.position) {
+			id = (id - 1) % 5;
 		}
+
+		this.setState({ componentId: this.components[id] });
+
+		this.position = window.scrollY;
 	};
 
 	render() {
