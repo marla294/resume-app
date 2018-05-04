@@ -7,7 +7,7 @@ class Education extends React.Component {
 			return null;
 		}
 		return (
-			<div>
+			<div className="component">
 				<div className="head">
 					<h1>Education</h1>
 					<h2>2000-2005</h2>
