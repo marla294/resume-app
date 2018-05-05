@@ -19,9 +19,7 @@ class Header extends React.Component {
 			this.myRef.current.offsetHeight ===
 			window.innerHeight + window.scrollY
 		) {
-			console.log("at bottom");
-		} else if (window.scrollY === 0) {
-			console.log("at top");
+			this.props.setComponentId("Projects");
 		}
 	}
 

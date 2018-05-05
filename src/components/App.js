@@ -20,7 +20,6 @@ class App extends React.Component {
 		this.loadProjects();
 		this.loadPositions();
 		this.loadSchools();
-		window.addEventListener("scroll", this.handleScroll);
 	}
 
 	loadProjects = () => {
@@ -35,36 +34,17 @@ class App extends React.Component {
 		this.setState({ schools: schools });
 	};
 
-	position = 0;
-
-	components = ["Header", "Projects", "PastWork", "Education", "Contact"];
-
-	handleScroll = event => {
-		let id;
-		this.components.forEach((component, index) => {
-			if (component === this.state.componentId) {
-				id = index;
-			}
-		});
-
-		if (window.scrollY > this.position) {
-			id = (id + 1) % 5;
-		} else if (window.scrollY < this.position) {
-			id = (id - 1) % 5;
-		}
-
-		this.setState({ componentId: this.components[id] });
-
-		this.position = window.scrollY;
+	setComponentId = component => {
+		this.setState({ componentId: component });
 	};
 
 	render() {
 		return (
-			<Header show={true} />
-
-			/*
 			<div>
-				<Header show={this.state.componentId === "Header"} />
+				<Header
+					show={this.state.componentId === "Header"}
+					setComponentId={this.setComponentId}
+				/>
 				<Projects
 					projects={this.state.projects}
 					show={this.state.componentId === "Projects"}
@@ -79,7 +59,6 @@ class App extends React.Component {
 				/>
 				<Contact show={this.state.componentId === "Contact"} />
 			</div>
-		*/
 		);
 	}
 }
