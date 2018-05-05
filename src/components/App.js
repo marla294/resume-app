@@ -60,6 +60,9 @@ class App extends React.Component {
 
 	render() {
 		return (
+			<Header show={true} />
+
+			/*
 			<div>
 				<Header show={this.state.componentId === "Header"} />
 				<Projects
@@ -76,6 +79,7 @@ class App extends React.Component {
 				/>
 				<Contact show={this.state.componentId === "Contact"} />
 			</div>
+		*/
 		);
 	}
 }

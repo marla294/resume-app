@@ -7,11 +7,22 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		this.height();
+		window.addEventListener("scroll", this.handleScroll);
 	}
 
-	height() {
-		console.log(this.myRef.current.scrollHeight);
+	handleScroll = event => {
+		this.movePage();
+	};
+
+	movePage() {
+		if (
+			this.myRef.current.offsetHeight ===
+			window.innerHeight + window.scrollY
+		) {
+			console.log("at bottom");
+		} else if (window.scrollY === 0) {
+			console.log("at top");
+		}
 	}
 
 	render() {
