@@ -75,6 +75,7 @@ class App extends React.Component {
 				<Projects
 					projects={this.state.projects}
 					show={this.state.currentPage === "Projects"}
+					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<PastWork
 					positions={this.state.positions}
