@@ -13,7 +13,7 @@ class App extends React.Component {
 		projects: {},
 		positions: {},
 		schools: {},
-		componentId: "Header",
+		currentPage: "Header",
 		currentPageHeight: 0
 	};
 
@@ -24,6 +24,8 @@ class App extends React.Component {
 		//window.scrollY = 0;
 		window.addEventListener("scroll", this.handleScroll);
 	}
+
+	pages = ["Header", "Projects", "PastWork", "Education", "Contact"];
 
 	loadProjects = () => {
 		this.setState({ projects: data });
@@ -41,8 +43,13 @@ class App extends React.Component {
 		this.setState({ currentPageHeight: height });
 	};
 
-	setComponentId = component => {
-		this.setState({ componentId: component });
+	setCurrentPage = component => {
+		this.setState({ currentPage: component });
+	};
+
+	setNextPage = component => {
+		let id = this.pages.findIndex(page => page === component);
+		this.setCurrentPage(this.pages[id + 1]);
 	};
 
 	handleScroll = event => {
@@ -54,7 +61,7 @@ class App extends React.Component {
 			this.state.currentPageHeight ===
 			window.innerHeight + window.scrollY
 		) {
-			this.setComponentId("Projects");
+			this.setNextPage(this.state.currentPage);
 		}
 	}
 
@@ -62,22 +69,22 @@ class App extends React.Component {
 		return (
 			<div>
 				<Header
-					show={this.state.componentId === "Header"}
+					show={this.state.currentPage === "Header"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Projects
 					projects={this.state.projects}
-					show={this.state.componentId === "Projects"}
+					show={this.state.currentPage === "Projects"}
 				/>
 				<PastWork
 					positions={this.state.positions}
-					show={this.state.componentId === "PastWork"}
+					show={this.state.currentPage === "PastWork"}
 				/>
 				<Education
 					schools={this.state.schools}
-					show={this.state.componentId === "Education"}
+					show={this.state.currentPage === "Education"}
 				/>
-				<Contact show={this.state.componentId === "Contact"} />
+				<Contact show={this.state.currentPage === "Contact"} />
 			</div>
 		);
 	}
