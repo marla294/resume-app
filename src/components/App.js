@@ -13,7 +13,7 @@ class App extends React.Component {
 		projects: {},
 		positions: {},
 		schools: {},
-		componentId: "Projects",
+		componentId: "Header",
 		currentPageHeight: 0
 	};
 
@@ -41,21 +41,20 @@ class App extends React.Component {
 		this.setState({ currentPageHeight: height });
 	};
 
+	setComponentId = component => {
+		this.setState({ componentId: component });
+	};
+
 	handleScroll = event => {
 		this.movePage();
 	};
 
 	movePage() {
-		console.log(
-			"innerHeight + scrollY: ",
-			window.innerHeight + window.scrollY
-		);
-		console.log("currentPageHeight: ", this.state.currentPageHeight);
 		if (
 			this.state.currentPageHeight ===
 			window.innerHeight + window.scrollY
 		) {
-			this.state.componentId = "Projects";
+			this.setComponentId("Projects");
 		}
 	}
 
