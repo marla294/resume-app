@@ -13,13 +13,16 @@ class App extends React.Component {
 		projects: {},
 		positions: {},
 		schools: {},
-		componentId: "Header"
+		componentId: "Projects",
+		currentPageHeight: 0
 	};
 
 	componentDidMount() {
 		this.loadProjects();
 		this.loadPositions();
 		this.loadSchools();
+		//window.scrollY = 0;
+		window.addEventListener("scroll", this.handleScroll);
 	}
 
 	loadProjects = () => {
@@ -34,16 +37,34 @@ class App extends React.Component {
 		this.setState({ schools: schools });
 	};
 
-	setComponentId = component => {
-		this.setState({ componentId: component });
+	setCurrentPageHeight = height => {
+		this.setState({ currentPageHeight: height });
 	};
+
+	handleScroll = event => {
+		this.movePage();
+	};
+
+	movePage() {
+		console.log(
+			"innerHeight + scrollY: ",
+			window.innerHeight + window.scrollY
+		);
+		console.log("currentPageHeight: ", this.state.currentPageHeight);
+		if (
+			this.state.currentPageHeight ===
+			window.innerHeight + window.scrollY
+		) {
+			this.state.componentId = "Projects";
+		}
+	}
 
 	render() {
 		return (
 			<div>
 				<Header
 					show={this.state.componentId === "Header"}
-					setComponentId={this.setComponentId}
+					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Projects
 					projects={this.state.projects}

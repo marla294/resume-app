@@ -7,19 +7,8 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener("scroll", this.handleScroll);
-	}
-
-	handleScroll = event => {
-		this.movePage();
-	};
-
-	movePage() {
-		if (
-			this.myRef.current.offsetHeight ===
-			window.innerHeight + window.scrollY
-		) {
-			this.props.setComponentId("Projects");
+		if (this.props.show) {
+			this.props.currentPageHeight(this.myRef.current.offsetHeight);
 		}
 	}
 
