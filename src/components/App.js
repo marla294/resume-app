@@ -80,10 +80,12 @@ class App extends React.Component {
 				<PastWork
 					positions={this.state.positions}
 					show={this.state.currentPage === "PastWork"}
+					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Education
 					schools={this.state.schools}
 					show={this.state.currentPage === "Education"}
+					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Contact show={this.state.currentPage === "Contact"} />
 			</div>

@@ -9,14 +9,24 @@ class Projects extends React.Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener("scroll", this.setHeight);
+		window.addEventListener("scroll", this.setHeightProjects);
 	}
 
-	setHeight = () => {
+	setHeightProjects = () => {
 		if (this.props.show) {
 			this.props.currentPageHeight(this.myRef.current.scrollHeight);
 		}
 	};
+
+	throttle(fn, wait) {
+		let time = Date.now();
+		return () => {
+			if (time + wait - Date.now() < 0) {
+				fn();
+				time = Date.now();
+			}
+		};
+	}
 
 	render() {
 		return this.props.show ? (

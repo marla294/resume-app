@@ -7,10 +7,14 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
+		window.addEventListener("scroll", this.setHeightHeader);
+	}
+
+	setHeightHeader = () => {
 		if (this.props.show) {
 			this.props.currentPageHeight(this.myRef.current.scrollHeight);
 		}
-	}
+	};
 
 	render() {
 		if (!this.props.show) {
