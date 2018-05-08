@@ -9,42 +9,29 @@ class Projects extends React.Component {
 	}
 
 	componentDidMount() {
-		if (this.props.show) {
-			this.myRef = React.createRef();
-			//console.log(this.myRef);
-			//this.props.currentPageHeight(this.myRef.current.offsetHeight);
-		}
+		window.addEventListener("scroll", this.setHeight);
 	}
 
 	setHeight = () => {
-		this.myRef = React.createRef();
-		console.log(this.myRef);
+		if (this.props.show) {
+			this.props.currentPageHeight(this.myRef.current.scrollHeight);
+		}
 	};
 
 	render() {
-		//this.myRef = React.createRef();
-		console.log(this.myRef);
-		if (!this.props.show) {
-			return null;
-		}
-		if (this.props.show) {
-			return (
-				<div className="component" ref={this.myRef}>
-					<div className="head">
-						<h1>Current Projects</h1>
-						<h2>2017-2018</h2>
-					</div>
-					<div className="flex-container justify-center">
-						{Object.keys(this.props.projects).map(key => (
-							<Project
-								key={key}
-								project={this.props.projects[key]}
-							/>
-						))}
-					</div>
+		return this.props.show ? (
+			<div className="component" ref={this.myRef}>
+				<div className="head">
+					<h1>Current Projects</h1>
+					<h2>2017-2018</h2>
 				</div>
-			);
-		}
+				<div className="flex-container justify-center">
+					{Object.keys(this.props.projects).map(key => (
+						<Project key={key} project={this.props.projects[key]} />
+					))}
+				</div>
+			</div>
+		) : null;
 	}
 }
 

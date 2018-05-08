@@ -58,7 +58,7 @@ class App extends React.Component {
 
 	movePage() {
 		if (
-			this.state.currentPageHeight ===
+			this.state.currentPageHeight <=
 			window.innerHeight + window.scrollY
 		) {
 			this.setNextPage(this.state.currentPage);

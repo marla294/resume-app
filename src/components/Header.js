@@ -8,7 +8,7 @@ class Header extends React.Component {
 
 	componentDidMount() {
 		if (this.props.show) {
-			this.props.currentPageHeight(this.myRef.current.offsetHeight);
+			this.props.currentPageHeight(this.myRef.current.scrollHeight);
 		}
 	}
 
