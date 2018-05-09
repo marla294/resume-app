@@ -17,15 +17,18 @@ class App extends React.Component {
 		currentPageHeight: 0
 	};
 
+	pages = ["Header", "Projects", "PastWork", "Education", "Contact"];
+	innerHeight = 0;
+	scrollOffset = 0;
+
 	componentDidMount() {
 		this.loadProjects();
 		this.loadPositions();
 		this.loadSchools();
-		//window.scrollY = 0;
+		this.innerHeight = window.innerHeight;
+		this.scrollOffset = window.scrollY;
 		window.addEventListener("scroll", this.handleScroll);
 	}
-
-	pages = ["Header", "Projects", "PastWork", "Education", "Contact"];
 
 	loadProjects = () => {
 		this.setState({ projects: data });
@@ -57,10 +60,13 @@ class App extends React.Component {
 	};
 
 	movePage() {
-		if (
-			this.state.currentPageHeight <=
-			window.innerHeight + window.scrollY
-		) {
+		console.log(
+			"scrollY: ",
+			window.scrollY,
+			"innerHeight: ",
+			document.body.clientHeight
+		);
+		if (this.state.currentPageHeight <= window.scrollY) {
 			this.setNextPage(this.state.currentPage);
 		}
 	}
@@ -83,11 +89,15 @@ class App extends React.Component {
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Education
+					show={false}
 					schools={this.state.schools}
-					show={this.state.currentPage === "Education"}
+					//show={this.state.currentPage === "Education"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
-				<Contact show={this.state.currentPage === "Contact"} />
+				<Contact
+					show={false}
+					//show={this.state.currentPage === "Contact"}
+				/>
 			</div>
 		);
 	}

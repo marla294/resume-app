@@ -17,14 +17,14 @@ class Header extends React.Component {
 	};
 
 	render() {
-		if (!this.props.show) {
-			return null;
+		let className = "header flex-container align-center hide";
+		if (this.props.show) {
+			className = "header flex-container align-center show";
+		} else {
+			className = "header flex-container align-center hide";
 		}
 		return (
-			<div
-				className="header flex-container align-center"
-				ref={this.myRef}
-			>
+			<div className={className} ref={this.myRef}>
 				<div>
 					<h1>Marla Foreman</h1>
 					<h3>JavaScript Software Engineer from Omaha, NE</h3>

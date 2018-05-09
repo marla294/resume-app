@@ -29,8 +29,14 @@ class Projects extends React.Component {
 	}
 
 	render() {
-		return this.props.show ? (
-			<div className="component" ref={this.myRef}>
+		let className = "component hide";
+		if (this.props.show) {
+			className = "component show";
+		} else {
+			className = "component hide";
+		}
+		return (
+			<div className={className} ref={this.myRef}>
 				<div className="head">
 					<h1>Current Projects</h1>
 					<h2>2017-2018</h2>
@@ -41,7 +47,7 @@ class Projects extends React.Component {
 					))}
 				</div>
 			</div>
-		) : null;
+		);
 	}
 }
 

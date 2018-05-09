@@ -16,7 +16,14 @@ a {
 }
 
 .header {
-	height: 101vh;
+	height: 110vh;
+}
+
+.show {
+	visibility: visible;
+}
+.hide {
+	visibility: hidden;
 }
 
 .align-center {
