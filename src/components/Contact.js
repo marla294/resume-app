@@ -3,11 +3,14 @@ import "../css/ParentComponent.css";
 
 class Contact extends React.Component {
 	render() {
-		if (!this.props.show) {
-			return null;
+		let className = "component hide";
+		if (this.props.show) {
+			className = "component show";
+		} else {
+			className = "component hide";
 		}
 		return (
-			<div>
+			<div className={className}>
 				<div className="head">
 					<h1>Contact Me</h1>
 				</div>

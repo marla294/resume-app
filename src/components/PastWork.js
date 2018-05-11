@@ -19,11 +19,14 @@ class PastWork extends React.Component {
 	};
 
 	render() {
-		if (!this.props.show) {
-			return null;
+		let className = "component hide";
+		if (this.props.show) {
+			className = "component show";
+		} else {
+			className = "component hide";
 		}
 		return (
-			<div ref={this.myRef}>
+			<div className={className} ref={this.myRef}>
 				<div className="head">
 					<h1>Work Experience</h1>
 					<h2>2005-2017</h2>

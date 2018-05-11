@@ -18,11 +18,14 @@ class Education extends React.Component {
 	};
 
 	render() {
-		if (!this.props.show) {
-			return null;
+		let className = "component hide";
+		if (this.props.show) {
+			className = "component show";
+		} else {
+			className = "component hide";
 		}
 		return (
-			<div className="component" ref={this.myRef}>
+			<div className={className} ref={this.myRef}>
 				<div className="head">
 					<h1>Education</h1>
 					<h2>2000-2005</h2>
