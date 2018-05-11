@@ -18,15 +18,11 @@ class App extends React.Component {
 	};
 
 	pages = ["Header", "Projects", "PastWork", "Education", "Contact"];
-	innerHeight = 0;
-	scrollOffset = 0;
 
 	componentDidMount() {
 		this.loadProjects();
 		this.loadPositions();
 		this.loadSchools();
-		this.innerHeight = window.innerHeight;
-		this.scrollOffset = window.scrollY;
 		window.addEventListener("scroll", this.handleScroll);
 	}
 
@@ -46,30 +42,19 @@ class App extends React.Component {
 		this.setState({ currentPageHeight: height });
 	};
 
-	setCurrentPage = component => {
-		this.setState({ currentPage: component });
-	};
-
-	setNextPage = component => {
-		let id = this.pages.findIndex(page => page === component);
-		this.setCurrentPage(this.pages[id + 1]);
+	setCurrentPage = () => {
+		if (window.scrollY <= 557) {
+			this.setState({ currentPage: "Header" });
+		} else if (window.scrollY <= 1769) {
+			this.setState({ currentPage: "Projects" });
+		} else if (window.scrollY <= 2981) {
+			this.setState({ currentPage: "PastWork" });
+		}
 	};
 
 	handleScroll = event => {
-		this.movePage();
+		this.setCurrentPage();
 	};
-
-	movePage() {
-		console.log(
-			"scrollY: ",
-			window.scrollY,
-			"innerHeight: ",
-			document.body.clientHeight
-		);
-		if (this.state.currentPageHeight <= window.scrollY) {
-			this.setNextPage(this.state.currentPage);
-		}
-	}
 
 	render() {
 		return (
