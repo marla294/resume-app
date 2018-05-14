@@ -7,17 +7,6 @@ class Education extends React.Component {
 		this.myRef = React.createRef();
 	}
 
-	componentDidMount() {
-		window.addEventListener("scroll", this.setHeightEducation);
-		console.log(this.myRef.current.scrollHeight);
-	}
-
-	setHeightEducation = () => {
-		if (this.props.show) {
-			this.props.currentPageHeight(this.myRef.current.scrollHeight);
-		}
-	};
-
 	render() {
 		let className = "component hide";
 		if (this.props.show) {

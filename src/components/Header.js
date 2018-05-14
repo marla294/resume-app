@@ -6,16 +6,6 @@ class Header extends React.Component {
 		this.myRef = React.createRef();
 	}
 
-	componentDidMount() {
-		window.addEventListener("scroll", this.setHeightHeader);
-	}
-
-	setHeightHeader = () => {
-		if (this.props.show) {
-			this.props.currentPageHeight(this.myRef.current.scrollHeight);
-		}
-	};
-
 	render() {
 		let className = "header flex-container align-center hide";
 		if (this.props.show) {
