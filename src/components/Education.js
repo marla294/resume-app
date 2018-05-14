@@ -1,5 +1,6 @@
 import React from "react";
 import School from "./School";
+import "../css/ParentComponent.css";
 
 class Education extends React.Component {
 	render() {
