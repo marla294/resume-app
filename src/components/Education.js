@@ -9,6 +9,7 @@ class Education extends React.Component {
 
 	componentDidMount() {
 		window.addEventListener("scroll", this.setHeightEducation);
+		console.log(this.myRef.current.scrollHeight);
 	}
 
 	setHeightEducation = () => {

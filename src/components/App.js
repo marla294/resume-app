@@ -49,6 +49,8 @@ class App extends React.Component {
 			this.setState({ currentPage: "Projects" });
 		} else if (window.scrollY <= 2981) {
 			this.setState({ currentPage: "PastWork" });
+		} else if (window.scrollY <= 5000) {
+			this.setState({ currentPage: "Education" });
 		}
 	};
 
@@ -60,28 +62,31 @@ class App extends React.Component {
 		return (
 			<div>
 				<Header
+					//show={true}
 					show={this.state.currentPage === "Header"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Projects
 					projects={this.state.projects}
+					//show={true}
 					show={this.state.currentPage === "Projects"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<PastWork
 					positions={this.state.positions}
+					//show={true}
 					show={this.state.currentPage === "PastWork"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Education
-					show={false}
 					schools={this.state.schools}
-					//show={this.state.currentPage === "Education"}
+					//show={true}
+					show={this.state.currentPage === "Education"}
 					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Contact
-					show={false}
-					//show={this.state.currentPage === "Contact"}
+					//show={true}
+					show={this.state.currentPage === "Contact"}
 				/>
 			</div>
 		);
