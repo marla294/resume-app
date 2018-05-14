@@ -3,11 +3,11 @@ import School from "./School";
 
 class Education extends React.Component {
 	render() {
-		let className = "hide";
+		let className = "education hide";
 		if (this.props.show) {
-			className = "show";
+			className = "education show";
 		} else {
-			className = "hide";
+			className = "education hide";
 		}
 		return (
 			<div className={className}>
