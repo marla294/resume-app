@@ -23,7 +23,7 @@ class App extends React.Component {
 		this.loadProjects();
 		this.loadPositions();
 		this.loadSchools();
-		window.addEventListener("scroll", this.handleScroll);
+		window.addEventListener("scroll", this.setCurrentPage);
 	}
 
 	loadProjects = () => {
@@ -38,10 +38,6 @@ class App extends React.Component {
 		this.setState({ schools: schools });
 	};
 
-	setCurrentPageHeight = height => {
-		this.setState({ currentPageHeight: height });
-	};
-
 	setCurrentPage = () => {
 		if (window.scrollY <= 557) {
 			this.setState({ currentPage: "Header" });
@@ -54,31 +50,21 @@ class App extends React.Component {
 		}
 	};
 
-	handleScroll = event => {
-		this.setCurrentPage();
-	};
-
 	render() {
 		return (
 			<div>
-				<Header
-					show={this.state.currentPage === "Header"}
-					currentPageHeight={this.setCurrentPageHeight}
-				/>
+				<Header show={this.state.currentPage === "Header"} />
 				<Projects
 					projects={this.state.projects}
 					show={this.state.currentPage === "Projects"}
-					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<PastWork
 					positions={this.state.positions}
 					show={this.state.currentPage === "PastWork"}
-					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Education
 					schools={this.state.schools}
 					show={this.state.currentPage === "Education"}
-					currentPageHeight={this.setCurrentPageHeight}
 				/>
 				<Contact show={this.state.currentPage === "Contact"} />
 			</div>
