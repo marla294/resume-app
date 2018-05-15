@@ -11,5 +11,9 @@
 }
 
 .education {
-	height: 1500px;
+	height: 400px;
+}
+
+.contact {
+	height: 100vh;
 }

@@ -3,33 +3,35 @@ import "../css/ParentComponent.css";
 
 class Contact extends React.Component {
 	render() {
-		let className = "component hide";
+		let className = "contact flex-container align-center hide";
 		if (this.props.show) {
-			className = "component show";
+			className = "contact flex-container align-center show";
 		} else {
-			className = "component hide";
+			className = "contact flex-container align-center hide";
 		}
 		return (
 			<div className={className}>
-				<div className="head">
-					<h1>Contact Me</h1>
-				</div>
 				<div>
-					<br />
-					<p>
-						If you would like to get in touch, please send me a
-						message on{" "}
-						<a
-							href="https://www.linkedin.com/in/marlaforeman/"
-							style={{ textDecoration: "underline" }}
-						>
-							LinkedIn
-						</a>
-					</p>
-					<br />
-					<br />
-					<br />
-					<br />
+					<div className="head">
+						<h1>Contact Me</h1>
+					</div>
+					<div>
+						<br />
+						<p>
+							If you would like to get in touch, please send me a
+							message on{" "}
+							<a
+								href="https://www.linkedin.com/in/marlaforeman/"
+								style={{ textDecoration: "underline" }}
+							>
+								LinkedIn
+							</a>
+						</p>
+						<br />
+						<br />
+						<br />
+						<br />
+					</div>
 				</div>
 			</div>
 		);
