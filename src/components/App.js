@@ -13,8 +13,7 @@ class App extends React.Component {
 		projects: {},
 		positions: {},
 		schools: {},
-		currentPage: "Header",
-		currentPageHeight: 0
+		currentPage: "Header"
 	};
 
 	pages = ["Header", "Projects", "PastWork", "Education", "Contact"];
