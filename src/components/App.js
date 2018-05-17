@@ -40,14 +40,19 @@ class App extends React.Component {
 	setCurrentPage = () => {
 		if (window.scrollY <= 557) {
 			this.setState({ currentPage: "Header" });
+			this.props.history.push("/Header");
 		} else if (window.scrollY <= 1769) {
 			this.setState({ currentPage: "Projects" });
+			this.props.history.push("/Projects");
 		} else if (window.scrollY <= 2981) {
 			this.setState({ currentPage: "PastWork" });
+			this.props.history.push("/Experience");
 		} else if (window.scrollY <= 3481) {
 			this.setState({ currentPage: "Education" });
+			this.props.history.push("/Education");
 		} else {
 			this.setState({ currentPage: "Contact" });
+			this.props.history.push("/Contact");
 		}
 	};
 
